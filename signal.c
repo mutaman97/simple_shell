@@ -15,3 +15,4 @@ void handle_signal(int signal)
 		fflush(stdout);
 	}
 }
+

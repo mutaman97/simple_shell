@@ -27,3 +27,4 @@ int env_cmd(__attribute__((unused)) char **array_tokens)
 	}
 	return (count_words);
 }
+

@@ -40,3 +40,4 @@ void free_path(char **path, char **tokens)
 		free(*path);
 
 }
+

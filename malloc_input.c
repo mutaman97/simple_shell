@@ -41,3 +41,4 @@ char *char_maker(char **input, size_t len)
 	}
 	return (*input);
 }
+

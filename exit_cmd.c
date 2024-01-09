@@ -20,3 +20,4 @@ int exit_cmd(char **array_tokens)
 
 	return (0);
 }
+

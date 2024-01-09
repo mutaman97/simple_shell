@@ -31,3 +31,4 @@ ssize_t my_getline(char **input, size_t *num_alloced)
 
 	return (num_char_read);
 }
+
