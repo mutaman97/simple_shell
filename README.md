@@ -1,1 +1,1 @@
-A UNIX LIKE SHELL CLONE
+A simple UNIX command interpreter.
