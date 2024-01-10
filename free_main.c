@@ -3,9 +3,10 @@
 /**
  * free_main - function that frees a double pointer
  * @tokens: the double pointer argument
+ * @input: secomd argument
  * Return: void
  */
-void free_main(char **tokens)
+void free_main(char **tokens, char *input)
 {
 	int cnt;
 
@@ -14,6 +15,7 @@ void free_main(char **tokens)
 		free(tokens[cnt]);
 	}
 	free(tokens);
+	free(input);
 
 }
 
