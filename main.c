@@ -34,7 +34,6 @@ int main(__attribute((unused)) int argc,
 			{
 				if (is_builtin(token) < 0)
 					free_main(token);
-					exit(status);
 			}
 			else
 			{
