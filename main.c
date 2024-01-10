@@ -10,7 +10,7 @@ int main(__attribute__((unused)) int argc,
 {
 	char *input, **token, *delimeter, *path;
 	size_t num_alloced = 0;
-	int status = 0, len, cmd_line;
+	int cmd_line;
 
 	cmd_line = 0;
 	delimeter = "\n ";
@@ -20,12 +20,12 @@ int main(__attribute__((unused)) int argc,
 		prompt();
 		cmd_line++;
 		my_getline(&input, &num_alloced);
-		len = strlen(input);
+		/*len = strlen(input);*/
 		if (input[0] == ' ' || strlen(input) == 1)
 			continue;
 		token = tokenize(input, delimeter);
 		if (!token)
-			status = 0;
+			cmd_line = 0;
 		else
 		{
 			if (check_builtin(token) == 0)
