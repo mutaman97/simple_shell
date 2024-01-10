@@ -10,9 +10,10 @@ int main(__attribute__((unused)) int argc,
 {
 	char *input, **token, *delimeter, *path;
 	size_t num_alloced = 0;
-	int cmd_line;
+	int cmd_line, status;
 
 	cmd_line = 0;
+	status = 0;
 	delimeter = "\n ";
 	signal(SIGINT, handle_signal);
 	while (1)
@@ -25,7 +26,7 @@ int main(__attribute__((unused)) int argc,
 			continue;
 		token = tokenize(input, delimeter);
 		if (!token)
-			cmd_line = 0;
+			status = 0;
 		else
 		{
 			if (check_builtin(token) == 0)
@@ -37,7 +38,7 @@ int main(__attribute__((unused)) int argc,
 			{
 				path = found_path(token[0]);
 				if (path != NULL)
-					execute(path, token);
+					status = execute(path, token);
 				else
 					error_hand(token, argv, cmd_line);
 			}
