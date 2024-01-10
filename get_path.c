@@ -82,6 +82,7 @@ char *found_path(char *command)
 				}
 				free(filepath);
 			}
+			/*free_path(&path_str, tokens);*/
 		}
 		else
 			free(path_str);

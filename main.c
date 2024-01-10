@@ -33,7 +33,7 @@ int main(__attribute((unused)) int argc,
 			if (check_builtin(token) == 0)
 			{
 				if (is_builtin(token) < 0)
-					free_main(token);
+					free_main(token, input);
 			}
 			else
 			{
@@ -45,7 +45,7 @@ int main(__attribute((unused)) int argc,
 			}
 		}
 	cmd_line = 0;
-	free(input);
+	free_main(token, input);
 	input = NULL;
 	}
 	return (0);
