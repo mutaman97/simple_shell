@@ -29,7 +29,7 @@ int chdir_cmd(char **array_tokens);
 int execute(char *command, char **array_tokens);
 int env_cmd(char **array_tokens);
 int exit_cmd(char **array_tokens);
-ssize_t my_getline(char **input, size_t *num_alloced);
+ssize_t my_getline(char **input, size_t *num_alloced, int status);
 void prompt(void);
 void handle_signal(int signal);
 size_t token_count(char *input, char *delimeter);
