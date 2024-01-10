@@ -34,7 +34,7 @@ void prompt(void);
 void handle_signal(int signal);
 size_t token_count(char *input, char *delimeter);
 char **tokenize(char *input, char *delimeter);
-void free_main(char **tokens);
+void free_main(char **tokens, char *input);
 int check_builtin(char **array_tokens);
 int is_builtin(char **array_tokens);
 int path_valid(char *command);
