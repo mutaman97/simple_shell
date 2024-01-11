@@ -39,6 +39,6 @@ int execute(char *command, char **array_tokens)
 
 		}
 	}
-	return (126);
+	return (0);
 }
 
